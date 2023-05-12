@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: sobiy/infra_web:v1.0.1
+    build: ../api_yamdb
     restart: always
     volumes:
       - static_value:/app/static/
