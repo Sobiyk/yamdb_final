@@ -47,8 +47,8 @@ jobs:
         - name: Build and push to Docker Hub
           uses: docker/build-push-action@v2
           with:
-            context: ./infra/
-            file: ./api_yamdb/Dockerfile
+            context: ./api_yamdb/
+            file: ./infra/docker-compose.yaml
             push: true
             tags: ${{ secrets.DOCKER_LOGIN }}/infra_web:latest
 
