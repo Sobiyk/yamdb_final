@@ -1,5 +1,14 @@
 import uuid
 
+from api.filters import TitleFilter
+from api.mixins import BaseListCreateDestroyView
+from api.permissions import (AuthorAndStaffOrReadOnly, IsAdminOrReadOnly,
+                             OwnerOrAdmins)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             SignUpSerializer, TitleReadSerializer,
+                             TitleWriteSerializer, TokenSerializer,
+                             UsersSerializer)
 from django.conf import settings
 from django.core.mail import send_mail
 from django.db import IntegrityError
@@ -13,16 +22,6 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
-
-from api.filters import TitleFilter
-from api.mixins import BaseListCreateDestroyView
-from api.permissions import (AuthorAndStaffOrReadOnly, IsAdminOrReadOnly,
-                             OwnerOrAdmins)
-from api.serializers import (CategorySerializer, CommentSerializer,
-                             GenreSerializer, ReviewSerializer,
-                             SignUpSerializer, TitleReadSerializer,
-                             TitleWriteSerializer, TokenSerializer,
-                             UsersSerializer)
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
