@@ -15,7 +15,7 @@ class SignUpSerializer(serializers.Serializer):
 
     def validate(self, data):
         if data['username'].lower() == 'me':
-            raise serializers.ValidationError('Логин me недоступен')
+            raise serializers.ValidationError('Логин me не доступен')
         return data
 
     class Meta:
