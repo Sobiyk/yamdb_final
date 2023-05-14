@@ -1,3 +1,3 @@
 # yamdb_final
 
-![workflow](https://github.com/Sobiyk/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![CI](https://github.com/Sobiyk/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
